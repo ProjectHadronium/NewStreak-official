@@ -1,9 +1,10 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 
 #include "SteamRequestGroupOfficersCallbackProxy.h"
-#include "CoreOnline.h"
+#include "UObject/CoreOnline.h"
+#include "AdvancedSteamFriendsLibrary.h"
 #include "OnlineSubSystemHeader.h"
-#include "OnlineSubsystemSteamTypes.h"
+//#include "OnlineSubsystemSteamTypes.h"
 
 //////////////////////////////////////////////////////////////////////////
 // UEndSessionCallbackProxy
@@ -44,12 +45,22 @@ void USteamRequestGroupOfficersCallbackProxy::Activate()
 void USteamRequestGroupOfficersCallbackProxy::OnRequestGroupOfficerDetails(ClanOfficerListResponse_t *pResult, bool bIOFailure)
 {
 	TArray<FBPSteamGroupOfficer> OfficerArray;
-
+	
 #if PLATFORM_WINDOWS || PLATFORM_MAC || PLATFORM_LINUX
+	
+	FOnlineSubsystemSteam* SteamSubsystem = (FOnlineSubsystemSteam*)(IOnlineSubsystem::Get(STEAM_SUBSYSTEM));
 
 	if (bIOFailure || !pResult || !pResult->m_bSuccess)
 	{
-		OnFailure.Broadcast(OfficerArray);
+		if (SteamSubsystem != nullptr)
+		{
+			SteamSubsystem->ExecuteNextTick([this]()
+			{
+				TArray<FBPSteamGroupOfficer> FailureArray;
+				OnFailure.Broadcast(FailureArray);
+			});
+		}
+		//OnFailure.Broadcast(OfficerArray);
 		return;
 	}
 
@@ -62,7 +73,7 @@ void USteamRequestGroupOfficersCallbackProxy::OnRequestGroupOfficerDetails(ClanO
 
 		Officer.bIsOwner = true;
 
-		TSharedPtr<const FUniqueNetId> ValueID(new const FUniqueNetIdSteam(ClanOwner));
+		TSharedPtr<const FUniqueNetId> ValueID(new const FUniqueNetIdSteam2(ClanOwner));
 		Officer.OfficerUniqueNetID.SetUniqueNetId(ValueID);
 		OfficerArray.Add(Officer);
 
@@ -72,17 +83,37 @@ void USteamRequestGroupOfficersCallbackProxy::OnRequestGroupOfficerDetails(ClanO
 
 			Officer.bIsOwner = false;
 
-			TSharedPtr<const FUniqueNetId> newValueID(new const FUniqueNetIdSteam(OfficerSteamID));
+			TSharedPtr<const FUniqueNetId> newValueID(new const FUniqueNetIdSteam2(OfficerSteamID));
 			Officer.OfficerUniqueNetID.SetUniqueNetId(newValueID);
 
 			OfficerArray.Add(Officer);
 		}
 
-		OnSuccess.Broadcast(OfficerArray);
+		if (SteamSubsystem != nullptr)
+		{
+			SteamSubsystem->ExecuteNextTick([OfficerArray, this]()
+			{
+				OnSuccess.Broadcast(OfficerArray);
+			});
+		}
+
+		//OnSuccess.Broadcast(OfficerArray);
 		return;
+	}
+	else
+	{
+		if (SteamSubsystem != nullptr)
+		{
+			SteamSubsystem->ExecuteNextTick([this]()
+			{
+				TArray<FBPSteamGroupOfficer> FailureArray;
+				OnFailure.Broadcast(FailureArray);
+			});
+		}
 	}
 #endif
 
-	OnFailure.Broadcast(OfficerArray);
+	// Should never hit this anyway
+	//OnFailure.Broadcast(OfficerArray);
 }
 

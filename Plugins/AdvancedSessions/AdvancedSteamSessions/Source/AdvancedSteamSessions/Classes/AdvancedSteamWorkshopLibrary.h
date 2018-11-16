@@ -6,7 +6,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "Online.h"
 #include "OnlineSubsystem.h"
-#include "OnlineSessionInterface.h"
+#include "Interfaces/OnlineSessionInterface.h"
 
 // @todo Steam: Steam headers trigger secure-C-runtime warnings in Visual C++. Rather than mess with _CRT_SECURE_NO_WARNINGS, we'll just
 //	disable the warnings locally. Remove when this is fixed in the SDK
@@ -205,10 +205,38 @@ struct FBPSteamWorkshopItemDetails
 public:
 	FBPSteamWorkshopItemDetails()
 	{
-
+		ResultOfRequest = FBPSteamResult::k_EResultOK;
+		FileType = FBPWorkshopFileType::k_EWorkshopFileTypeMax;
+		CreatorAppID = 0;
+		ConsumerAppID = 0;
+		VotesUp = 0;
+		VotesDown = 0;
+		CalculatedScore = 0.f;
+		bBanned = false;
+		bAcceptedForUse = false;
+		bTagsTruncated = false;
 	}
 
 	FBPSteamWorkshopItemDetails(SteamUGCDetails_t &hUGCDetails)
+	{
+		ResultOfRequest = (FBPSteamResult)hUGCDetails.m_eResult;
+		FileType = (FBPWorkshopFileType)hUGCDetails.m_eFileType;
+		CreatorAppID = (int32)hUGCDetails.m_nCreatorAppID;
+		ConsumerAppID = (int32)hUGCDetails.m_nConsumerAppID;
+		Title = FString(hUGCDetails.m_rgchTitle, k_cchPublishedDocumentTitleMax);
+		Description = FString(hUGCDetails.m_rgchDescription, k_cchPublishedDocumentDescriptionMax);
+		ItemUrl = FString(hUGCDetails.m_rgchURL, k_cchPublishedFileURLMax);
+		VotesUp = (int32)hUGCDetails.m_unVotesUp;
+		VotesDown = (int32)hUGCDetails.m_unVotesDown;
+		CalculatedScore = hUGCDetails.m_flScore;
+		bBanned = hUGCDetails.m_bBanned;
+		bAcceptedForUse = hUGCDetails.m_bAcceptedForUse;
+		bTagsTruncated = hUGCDetails.m_bTagsTruncated;
+
+		CreatorSteamID = FString::Printf(TEXT("%llu"), hUGCDetails.m_ulSteamIDOwner);
+	}
+
+	FBPSteamWorkshopItemDetails(const SteamUGCDetails_t &hUGCDetails)
 	{
 		ResultOfRequest = (FBPSteamResult)hUGCDetails.m_eResult;
 		FileType = (FBPWorkshopFileType)hUGCDetails.m_eFileType;

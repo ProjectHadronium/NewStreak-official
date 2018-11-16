@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-SettingFunctionality-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Intermediate\Build\Win64\CPPNewStreakEditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.h.obj"
+"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\DebugGame\SettingFunctionality\Module.SettingFunctionality.cpp.obj"
+"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\DebugGame\SettingFunctionality\Module.SettingFunctionality.gen.cpp.obj"
+"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\DebugGame\SettingFunctionality\PCLaunch.rc.res"
+/OUT:"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\DebugGame\SettingFunctionality\UE4Editor-SettingFunctionality-Win64-DebugGame.lib"

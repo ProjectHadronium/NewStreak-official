@@ -6,7 +6,7 @@
 #include "BlueprintDataDefinitions.h"
 #include "Online.h"
 #include "OnlineSubsystem.h"
-#include "VoiceInterface.h"
+#include "Interfaces/VoiceInterface.h"
 //#include "OnlineFriendsInterface.h"
 //#include "OnlineUserInterface.h"
 //#include "OnlineMessageInterface.h"
@@ -14,7 +14,7 @@
 #include "Engine/GameInstance.h"
 //#include "OnlineSessionInterface.h"
 
-#include "UObjectIterator.h"
+#include "UObject/UObjectIterator.h"
 
 #include "AdvancedVoiceLibrary.generated.h"
 
