@@ -28,7 +28,7 @@ Git is the open source distributed version control system that facilitates GitHu
 `$ git clone https://github.com/[your username]/NewStreak.git`
    
 5. Create a remote *upstream* to the original repository:    
-`$ git remote add upstream https://github.com/ProjectHadronium/NewStreak-new.git`
+`$ git remote add upstream https://github.com/ProjectHadronium/NewStreak-official.git`
 
 "volatile" is the name of the NewStreak repo in ProjectHadronium on GitHub.
 Your GitHub repo is called "origin".
@@ -36,24 +36,24 @@ Your GitHub repo is called "origin".
 6. Start making changes!
 
 ### Making changes  
-1. Navigate to the working directory (use "/" instead of "\" which is what you get when you copy-paste the path from explorer):     
+1. Navigate to the working directory (use `/` instead of `"\"` which is what you get when you copy-paste the path from explorer):     
 `$ cd [file-path]/NewStreak`
    
 2. Sync your project with the original:
-$ git checkout master (if you aren't on master already)
-$ git pull volatile master 
-$ git push origin master
+`$ git checkout master` (if you aren't on master already)
+`$ git pull volatile master 
+$ git push origin master`
 
 2a. You can also do:
-$ git checkout master (if you aren't on master already)
-$ git pull volatile master && git push origin master  
+`$ git checkout master` (if you aren't on master already)
+`$ git pull volatile master && git push origin master ` 
 
 The "&&" just means you run two lines of code in one line but running them separately achieves the same thing and you can see if things go wrong.
 
 One instance where things can go wrong is if you're on master, you type in "git pull volatile master" and it says "please commit or stash your changes".
 
 2b. To solve this, type in:
-$ git reset --hard
+`$ git reset --hard`
 
 Then try again and it should accept it.
 
@@ -67,15 +67,15 @@ If you don't remember the branch names, download GitHub desktop, it'll show you 
 Okay, so this is where it gets confusing. When you're done making changes and you're ready to push those changes to GitHub, you have to add files to a "staging area". Essentially, this is where all the modified files go for getting pushed to master, it's just an area that isn't your branch or master. Only add files that were changed, do not add files you don't need.
 
 4. Stage any changes:     
-$ git add [file-path]/[file name].[extension]
+`$ git add [file-path]/[file name].[extension]`
 
 4a. If you have a folder of several files, do this:
-$ git add [file-path]/[folder name]  
+`$ git add [file-path]/[folder name]  `
 
 All of the modified files will be added to the staging area.
 
 5. Switch to master (don't worry, your modified files are still in the staging area):
-$ git checkout master
+`$ git checkout master`
 
 When you use these next commands, here's what happens. Your modified files get packaged together into what is known as a "commit", commits have IDs which are useful if you ever fubar your git repository, you can use the commit ID to reset your repo to when that commit was the latest version. The commit then gets pushed to your master, changing it. You then have to push your current version of master to origin (GitHub repo), which will update it with the commit you just created. 
 
