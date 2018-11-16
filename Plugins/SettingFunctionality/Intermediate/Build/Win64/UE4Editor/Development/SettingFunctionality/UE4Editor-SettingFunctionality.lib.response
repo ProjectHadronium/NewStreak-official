@@ -6,8 +6,8 @@
 /NAME:"UE4Editor-SettingFunctionality.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Intermediate\Build\Win64\CPPNewStreakEditor\Development\Engine\SharedPCH.Engine.h.obj"
-"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Module.SettingFunctionality.cpp.obj"
-"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Module.SettingFunctionality.gen.cpp.obj"
-"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\PCLaunch.rc.res"
-/OUT:"C:\Users\Massum\Documents\Unreal Projects\CPPNewStreak\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\UE4Editor-SettingFunctionality.lib"
+"C:\Users\Massum\Documents\GitHub\NewStreak-official\Intermediate\Build\Win64\CPPNewStreakEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Module.SettingFunctionality.cpp.obj"
+"C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Module.SettingFunctionality.gen.cpp.obj"
+"C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\PCLaunch.rc.res"
+/OUT:"C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\UE4Editor-SettingFunctionality.lib"
