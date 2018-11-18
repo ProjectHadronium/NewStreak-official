@@ -24,7 +24,7 @@
 /wd4838
 /we4668
 /I .
-/I C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Source\SettingFunctionality\Private
+/I "C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Plugins\SettingFunctionality (UE 4.20)\Source\SettingFunctionality\Private"
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime
 /I Runtime\CoreUObject\Public
@@ -413,22 +413,21 @@
 /I ThirdParty
 /I ThirdParty\libSampleRate\Public
 /I ThirdParty\libSampleRate
-/I C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Inc\SettingFunctionality
-/I C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Source
-/I C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Source\SettingFunctionality\Public
-/I C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Source\SettingFunctionality
+/I "C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Plugins\SettingFunctionality (UE 4.20)\Intermediate\Build\Win64\UE4Editor\Inc\SettingFunctionality"
+/I "C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Plugins\SettingFunctionality (UE 4.20)\Source"
+/I "C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Plugins\SettingFunctionality (UE 4.20)\Source\SettingFunctionality\Public"
+/I "C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Plugins\SettingFunctionality (UE 4.20)\Source\SettingFunctionality"
 /I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\INCLUDE"
-/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"
-/FI"C:\Users\Massum\Documents\GitHub\NewStreak-official\Intermediate\Build\Win64\CPPNewStreakEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"C:\Users\Massum\Documents\GitHub\NewStreak-official\Intermediate\Build\Win64\CPPNewStreakEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"C:\Users\Massum\Documents\GitHub\NewStreak-official\Intermediate\Build\Win64\CPPNewStreakEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Module.SettingFunctionality.gen.cpp"
-/FI"C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Definitions.SettingFunctionality.h"
-/Fo"C:\Users\Massum\Documents\GitHub\NewStreak-official\Plugins\SettingFunctionality\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Module.SettingFunctionality.gen.cpp.obj"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt"
+/FI"C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
+/Yu"C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
+/Fp"C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
+"C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Plugins\SettingFunctionality (UE 4.20)\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Module.SettingFunctionality.gen.cpp"
+/FI"C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Plugins\SettingFunctionality (UE 4.20)\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Definitions.SettingFunctionality.h"
+/Fo"C:\Users\avika\OneDrive\Documents\Unreal Projects\AMS\Plugins\SettingFunctionality (UE 4.20)\Intermediate\Build\Win64\UE4Editor\Development\SettingFunctionality\Module.SettingFunctionality.gen.cpp.obj"
 /TP
 /GR-
 /W4
