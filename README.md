@@ -89,3 +89,5 @@ When you use these next commands, here's what happens. Your modified files get p
 8. Repeat from step 2 of "Making Changes"
 
 Note: All changes are reviewed before merging to this repository. If requested to make further changes, just push them to your branch to automatically update the PR. Please use descriptive commit and pull request summaries to explain your changes!
+
+Bot Test
