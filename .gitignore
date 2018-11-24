@@ -68,10 +68,17 @@ Saved/*
 
 # Compiled source files for the engine to use
 Intermediate/*
-!Intermediate/ProjectFiles/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
 
 # Whitelist plugins folder
 !Plugins/**
+
+# Intermediates from the plugins folder
+Plugins/SettingFunctionality/Intermediate
+Plugins/AdvancedSessions/AdvancedSessions/Intermediate
+Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate
+
+# Whitelist Visual Studio project files
+!Intermediate/ProjectFiles/*
