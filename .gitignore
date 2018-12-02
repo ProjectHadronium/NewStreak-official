@@ -75,10 +75,8 @@ DerivedDataCache/*
 # Whitelist plugins folder
 !Plugins/**
 
-# Intermediates from the plugins folder
-Plugins/SettingFunctionality/Intermediate
-Plugins/AdvancedSessions/AdvancedSessions/Intermediate
-Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate
+# Blacklist intermediates in all plugin folders
+Plugins/**/Intermediate/**
 
 # Whitelist Visual Studio project files
 !Intermediate/ProjectFiles/*
